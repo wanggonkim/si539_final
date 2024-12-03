@@ -88,7 +88,7 @@ header .nav-menu li a:hover {
 
 
 .hero {
-    background-image: url("/image/sit_back.png");
+    background-image: url("../image/sit_back.png");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -467,7 +467,7 @@ footer {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
+    height: 30vh; /* Full viewport height */
     background-image: url("../image/white_paper.jpg");
     background-size: cover;
     position: relative; /* Normal flow initially */
