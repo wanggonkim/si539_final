@@ -88,6 +88,7 @@ header .nav-menu li a:hover {
 
 
 .hero {
+    background-image: url("/image/sit_back.png");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +97,7 @@ header .nav-menu li a:hover {
     background-color: #ffffff;
     padding: 2rem 1rem;
     border: 1px solid #000000;
-    background-image: url("image/sit_back.png");
+    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -266,7 +267,7 @@ footer {
 
 /* main page 2nd section background*/
 .new_background {
-    background-image: url("image/black_background2.JPG");
+    background-image: url("/image/black_background2.JPG");
     background-size: 80%;
     color: white;
     padding-top: 55px;
@@ -467,7 +468,7 @@ footer {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh; /* Full viewport height */
-    background-image: url('image/white_paper.JPG');
+    background-image: url('/image/white_paper.JPG');
     background-size: cover;
     position: relative; /* Normal flow initially */
     overflow: hidden; /* Ensure no overflow during transition */
