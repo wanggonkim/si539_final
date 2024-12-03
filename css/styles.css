@@ -88,7 +88,7 @@ header .nav-menu li a:hover {
 
 
 .hero {
-    background-image: url("../image/sit_back.png");
+    background-image: url("/image/sit_back.png");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,7 +267,7 @@ footer {
 
 /* main page 2nd section background*/
 .new_background {
-    background-image: url("../image/black_background2.JPG");
+    background-image: url("../image/black_background2.jpg");
     background-size: 80%;
     color: white;
     padding-top: 55px;
