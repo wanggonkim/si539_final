@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korean Dishes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <a href="index.html">
+        <img src="image/Logo.png" alt="logo of let goni cook website" class="logo">
+        <div class="flag">
+          <img src="image/korean flag.png" alt="image of korean flag" class="flag">
+        </div>
+      </a>
+        <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dish_gen.html">Dish Generator</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+      <section class="hero_2">
+        <h1>DISH GENERATOR</h1>
+      </section>
+      <form id="ingredient-form">
+        <label for="ingredients">Enter up to 10 ingredients (comma separated):</label>
+        <textarea id="ingredients" name="ingredients" rows="4" cols="50"
+          placeholder="e.g., kimchi, tofu, garlic, etc."></textarea>
+        <button type="submit">Generate Dishes</button>
+      </form>
+
+      <div id="result">
+        <h2>Suggested Dishes</h2>
+        <div id="dish-1"></div>
+        <div id="dish-2"></div>
+      </div>
+
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>© 2024 LET GONI COOK. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('ingredient-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Get the user input (ingredients)
+  const ingredients = document.getElementById('ingredients').value;
+
+  // Construct the prompt for the API
+  const prompt = `Based on the following ingredients: ${ingredients}, suggest popular Korean dishes.`;
+
+  try {
+    // Send the request to your backend server
+    const response = await fetch('http://localhost:3000/generate-dishes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ prompt }),
+    });
+
+    // Check if the response is successful
+    if (!response.ok) {
+      throw new Error('Failed to fetch suggestions.');
+    }
+
+    const data = await response.json();
+
+    // Clear previous results
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '<h2>Suggested Dishes</h2>';
+
+    // Display the generated dishes
+    if (data.dishes && data.dishes.length > 0) {
+      data.dishes.forEach((dish, index) => {
+        const dishElement = document.createElement('div');
+        dishElement.innerHTML = `<h3>${index + 1}. ${dish}</h3>`;
+        resultDiv.appendChild(dishElement);
+      });
+    } else {
+      resultDiv.innerHTML = '<p>No dishes found. Try again!</p>';
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    document.getElementById('result').innerHTML = '<p>Error generating dishes. Please try again later.</p>';
+  }
+});
+
+  
+  </script>
+</body>
+
+</html>

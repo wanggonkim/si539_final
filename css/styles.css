@@ -1,0 +1,554 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ffffff;
+    padding-left: 20%;
+    padding-right: 20%;
+    box-sizing: border-box;
+    border: 15px solid #000;
+}
+
+.container {
+
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+/* Header */
+
+.street{
+    width: 100%;
+    height: 150%;
+}
+.flag img {
+    width: 19%;
+    max-width: 130px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    align-items: center;
+
+    padding: 10px;
+    position: relative;
+
+}
+
+header .logo {
+    max-width: 200px;
+    height: auto;
+}
+
+header .flag {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .flag img {
+    width: 25px;
+
+    height: auto;
+}
+
+header .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    font-size: .79rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+header .nav-menu li a {
+
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.7s;
+}
+
+header .nav-menu li a:hover {
+    color: #f0a500;
+}
+
+/* Hero Section */
+
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2rem 1rem;
+    border: 1px solid #000000;
+    background-image: url("image/sit_back.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.hero_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+
+
+}
+
+.hero h1 {
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Popular Dishes Section */
+.popular-dishes {
+    padding: 2rem 1rem;
+    background: #fff;
+    text-align: center;
+}
+
+.popular-dishes h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Dish Grid */
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Dish Card */
+.dish-card {
+    border: 3px solid #000000;
+    padding: 1rem;
+    background: #fff;
+    text-align: center;
+
+}
+
+.ingredient-list {
+    list-style-position: inside;
+    /* Makes sure the bullets are within the list */
+    text-align: left;
+    /* Aligns the text of the list items to the left */
+    padding-left: 0;
+    /* Removes any default left padding */
+}
+
+.dish-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.dish-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dish-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.dish-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 2.2);
+    transition: transform 1.3s ease, box-shadow 1.3s ease;
+}
+
+/*  */
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-top: 3px;
+    font-size: 0.9rem;
+    border-top: 3px solid #000;
+}
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+
+
+/* Dish Card */
+.dish-card {
+    perspective: 1000px;
+    width: 250px;
+    /* Fixed width */
+    height: 450px;
+    /* Fixed height */
+    margin: 0 auto;
+
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1.0s;
+
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    /* Include padding and border in dimensions */
+    overflow: hidden;
+    /* Prevent content overflow */
+    padding: 1rem;
+
+}
+
+.card-front {
+    background-color: hsl(0, 0%, 100%);
+
+}
+
+.card-back {
+    background-color: #000000;
+    transform: rotateY(180deg);
+    color: white;
+
+}
+
+/* Flip the card on hover */
+.dish-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* main page 2nd section background*/
+.new_background {
+    background-image: url("image/black_background2.JPG");
+    background-size: 80%;
+    color: white;
+    padding-top: 55px;
+    background-color: #000;
+
+}
+
+
+.big_k {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    
+    letter-spacing: 10px;
+
+
+}
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+    
+
+}
+
+.myface {
+    grid-column: 1;
+    width: 35%;
+    justify-self: end;
+
+}
+
+.text-container {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: start;
+}
+
+.item {
+    font-size: 2.8rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: inline-block;
+    padding: 1px 2px;
+    margin: 2px 0;
+
+}
+
+
+.item {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: transform 2s ease-out, opacity 1s ease-out;
+    overflow: hidden;
+}
+
+.item.visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Slide to normal position */
+}
+
+.spacer {
+    height: 70px;
+    width: 100%;
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+/* Signature Container */
+
+.signature {
+    width: 10%;
+    padding-left: 46%;
+    
+}
+
+.quote {
+    padding-left: 17%;
+    padding-right: 10%;
+}
+
+.kfc {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 200%;
+
+}
+
+.mother {
+    padding-left: 70%;
+}
+
+
+
+
+
+/**/
+
+.moving-text {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 50px;
+    /* Adjust as needed */
+    background-color: #ff0000;
+    /* Optional */
+}
+
+.wrapper {
+    display: flex;
+    animation: scroll-infinite 23s linear infinite;
+    white-space: nowrap;
+    
+}
+
+.text {
+    padding-right: 14px;
+    /* Space between repetitions */
+    font-size: 1.8rem;
+    color: #000000;
+    flex-shrink: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.wrapper:hover {
+    animation-play-state: paused;
+}
+
+/* section4 */
+.section4{
+    text-align: center;
+    font-size: 150%;
+    font-weight: 900;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
+
+
+.container{
+    font-size: 0.9rem;
+    font-weight: bold;
+    
+   
+  }
+
+
+
+#cursor{
+    color: #000000;
+    animation: blink 2s linear infinite;
+    font-size: 1.6rem;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 100%
+    
+    }
+    50%{
+        opacity: 0%
+    }
+}
+
+
+
+
+.question {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-image: url('image/white_paper.JPG');
+    background-size: cover;
+    position: relative; /* Normal flow initially */
+    overflow: hidden; /* Ensure no overflow during transition */
+}
+
+.chef {
+    font-size: 3rem;
+    text-align: center;
+    transition: opacity 1s ease; /* Smooth transition for text changes */
+}
+
+
+
+
+
+
+
+
+/*                  spinning wheel              */
+
+
+.wrap {
+    width: 90%;
+    max-width: 35.37em;
+    max-height: 90vh;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 1em;
+    
+  }
+  .contain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #wheel {
+    max-height: inherit;
+    width: inherit;
+    top: 0;
+    padding: 0;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #spin-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 26%;
+    width: 26%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
+   
+    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  .imgs {
+    position: absolute;
+    width: 4em;
+    top: 45%;
+    right: -8%;
+  }
+  #final-value {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1.5em;
+    color: #202020;
+    font-weight: 500;
+  }
+  
+  #final-value {
+    padding: 10px;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
